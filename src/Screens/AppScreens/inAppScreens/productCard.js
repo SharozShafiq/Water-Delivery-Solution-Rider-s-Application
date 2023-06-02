@@ -44,6 +44,7 @@ useEffect(() => {
   getId();
 }, [])
 
+      //Get Token From the Async Storage and set its value to SetID
       const getId = async () => {
         try {
           const value = await AsyncStorage.getItem('token');

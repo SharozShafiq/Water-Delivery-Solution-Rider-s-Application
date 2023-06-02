@@ -23,12 +23,13 @@ export default function Riderprofile({route}) {
   const [UserEmail, setUserEmail] = useState([]);
   const [UserPhone, setUserPhone] = useState([]);
   const navigation = useNavigation();
+
+  //if Token Present in Async Storage then make Api Post Request with that token ans set profile information
   const getRiderData = async () => {
     console.log(getRiderUri);
     const value = await AsyncStorage.getItem('token');
     
     //console.log(token+" rider token");
-      
       if(value != null){
         console.log(value+"value");
       axios({
@@ -82,13 +83,14 @@ export default function Riderprofile({route}) {
       console.log("Dont Have Token");
     }
     }
+  //Call getRiderData on useEffect
   useEffect(() => {
     getRiderData();
   
 }, [])
 
   
-
+  //User SignOut, remove token for Storage and navigate to Login Screen
   const doUserLogOut = async function () {
     
       try {

@@ -10,6 +10,7 @@ const Products = ({route, navigation}) => {
   //setPro(products);
   console.log(products);
   return (
+    //Show Products details in FlatList
       <View style={styles.card}>
       <FlatList 
       showsVerticalScrollIndicator={false}

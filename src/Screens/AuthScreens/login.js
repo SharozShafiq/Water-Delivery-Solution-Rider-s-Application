@@ -25,6 +25,7 @@ const[email,setEmail]=useState('');
 const[password,setPassword]=useState('');
 // const login=useContext(AuthContext);
 
+    //Login Post and setresponse for Login
     const Login = async () => {
         try {
             axios({
@@ -86,6 +87,8 @@ const[password,setPassword]=useState('');
         } catch (error) {
             console.log('error')
         }
+
+        //Store userToken to Async Storage
         const storetoken=async(abc) => {
             try {
               await AsyncStorage.setItem('token', abc);
@@ -98,6 +101,7 @@ const[password,setPassword]=useState('');
               console.log("error in store");
             }
           }
+         //Store userID to Async Storage 
           const storeid=async(abc) => {
             try {
               await AsyncStorage.setItem('uid', abc);
@@ -110,6 +114,8 @@ const[password,setPassword]=useState('');
               console.log("error in store");
             }
           }
+
+          //Get userToken from Async Storage 
           const getToken = async () => {
             try {
               const value = await AsyncStorage.getItem('token');

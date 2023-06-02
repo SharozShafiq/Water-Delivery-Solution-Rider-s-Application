@@ -12,7 +12,7 @@ export default function PaymentScreen() {
         }
         initialize().catch(console.error);
       }, []);
-
+  //Payment Handling 
   const handlePayment = async () => {
     console.log(cardDetails);
     try {
@@ -30,11 +30,8 @@ export default function PaymentScreen() {
             postalCode: "12345", 
             validCVC: "Valid",
              validExpiryDate: "Valid", 
-             validNumber: "Valid"
-
-              
+             validNumber: "Valid"             
           }
-          
         });
   
         if (error) {

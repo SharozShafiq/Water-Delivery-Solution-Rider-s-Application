@@ -18,6 +18,7 @@ const MyOrders=()=> {
     getActiveOrders();
   }, [])
   
+  //Get All the Active Orders and Set their data
   const getActiveOrders= async()=>{
     try {
       const value = await AsyncStorage.getItem('uid');
@@ -111,6 +112,7 @@ const History=()=> {
     getCompletedOrders();
   }, [])
   
+  //Get Details of Complete Details of Recieved and Delivered Orders 
   const getCompletedOrders= async()=>{
     try {
       const value = await AsyncStorage.getItem('uid');

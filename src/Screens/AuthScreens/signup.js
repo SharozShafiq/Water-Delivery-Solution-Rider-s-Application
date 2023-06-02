@@ -27,6 +27,7 @@ export default function Signup({navigation}) {
 
     //const register =useContext(AuthContext);
 
+    //Post Signup information to Api and show result
     const Register=()=>{
         axios({
             method:'Post',

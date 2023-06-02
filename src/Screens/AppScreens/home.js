@@ -13,12 +13,16 @@ import { getCategory, getProducts, } from '../../API/api';
 export default function Home({navigation,route}) {
   const [Pro, setPro] = useState([]);
   const [Cate, setCate] = useState([]);
+
+  //Call ProList and Categories on UseEffect
   useEffect(() => {
    // getBanner();
     ProList();
     Categories();
 
   }, [],[])
+
+  //Try to get Data from Api and set Response data and other Information
   const Categories=()=>{
     try{
       console.log("try mein");
@@ -55,6 +59,8 @@ export default function Home({navigation,route}) {
   console.log("not trying");
  }
   };
+
+    //Try to get Data from Api and set Response data and other Information
   const ProList=()=>{
     try{
      // console.log("try mein");
