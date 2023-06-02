@@ -1,0 +1,12 @@
+export const baseURI='https://hyperkodes.net/fyp/react-api/';
+export const baseURL='http://10.0.2.2/ecommerce/react-api/';
+export const registerURI=baseURL+'userRegister.php';
+export const loginURI=baseURL+'userLogin.php';
+export const getRiderUri=baseURI+'getRider.php';
+export const sendLocationURI=baseURI+'sendLocation.php';
+export const sendLastLocationURi=baseURI+'sendLastLatLong.php';
+export const getProducts=baseURL+'getProducts.php';
+export const getCategory=baseURL+'getCategories.php';
+export const cartURI=baseURL+'cartApi.php';
+export const getCartURI=baseURL+'getCartApi.php?uid=';
+export const getOrders=baseURL+'userOrderGet.php';
